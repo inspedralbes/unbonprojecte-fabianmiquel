@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnimalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::get('/animales', [AnimalController::class, 'index']);
+
+Route::post('/animales', [AnimalController::class, 'store']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
