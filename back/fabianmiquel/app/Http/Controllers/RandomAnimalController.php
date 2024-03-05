@@ -23,7 +23,7 @@ class RandomAnimalController extends Controller
         $randomCharacteristic = $characteristics[array_rand($characteristics)];
 
 
-        $imageUrl = '../' . strtolower($randomAnimal) . '.jpg';
+        $imageUrl = 'img/image_' . strtolower($randomAnimal) . '.jpg';
 
         $data = [
             'animal' => $randomAnimal,
