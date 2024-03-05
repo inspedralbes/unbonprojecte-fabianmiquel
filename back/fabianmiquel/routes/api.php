@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/random-animal', [RandomAnimalController::class, 'getRandomAnimal']);
+Route::post('/random-animal', [RandomAnimalController::class, 'getRandomAnimal']);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
